@@ -8,11 +8,4 @@ require __DIR__ . '/header.php';
 
 <header><?php require __DIR__ . '/navbar.php'; ?></header>
 <main>
-
-
-
-
-
 </main>
-
-<?php require __DIR__ . '/footer.php'; ?>

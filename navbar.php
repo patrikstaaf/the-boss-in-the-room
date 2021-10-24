@@ -1,4 +1,4 @@
-<nav class="bg-gray-100 fixed top-0 z-10 inset-x-0">
+<nav class="bg-white fixed top-0 z-10 inset-x-0">
     <div class="max-w-6xl mx-auto px-4">
         <div class="flex justify-between">
 
@@ -17,7 +17,7 @@
                 <a href="/albums.php" class="py-5 px-3 text-gray-700 hover:text-gray-900">Albums</a>
                 <a href="/tracks.php" class="py-5 px-3 text-gray-700 hover:text-gray-900">Tracks</a>
                 <a href="/concerts.php" class="py-5 px-3 text-gray-700 hover:text-gray-900">Concerts</a>
-                <a href="/quiz.php" class="py-2 px-3 bg-yellow-400 hover:bg-yellow-300 text-yellow-900 hover:text-yellow-800 rounded transition duration-300">Quiz</a>
+                <a href="/quiz.php" class="py-2 px-3 bg-black hover:bg-yellow-300 text-white hover:text-yellow-800 rounded transition duration-300">Quiz</a>
             </div>
 
             <!-- mobile button goes here -->

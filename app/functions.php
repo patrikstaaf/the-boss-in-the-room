@@ -4,17 +4,17 @@ declare(strict_types=1);
 
 // $milliseconds = $tracksArray['duration'];
 
-function formatMilliseconds($milliseconds): string
+function formatMilliseconds(int $milliseconds): string
 {
     $seconds = floor($milliseconds / 1000);
     $minutes = floor($seconds / 60);
 
-    $format = '%02d:%02d';
-    return $time = sprintf($format, $minutes, $seconds);
+    $format = '%02d:%d';
+    return $time = sprintf($format, $minutes, floatval(substr(strval($seconds), 0, 2)));
 }
 
 
-function sortByYear(array $albumsArray): array
+function sortAlbumByYear(array $albumsArray): array
 {
     usort($albumsArray, function ($a, $b) {
         return $a['release_year'] <=> $b['release_year'];

@@ -37,7 +37,7 @@ $tracksArray = $db->getTracks();
                                 <tr>
                                     <td><?= $track['name']; ?></td>
                                     <td><?= $track['album']; ?></td>
-                                    <td><?= formatMilliseconds($milliseconds); ?></td>
+                                    <td><?= formatMilliseconds($track['duration']); ?></td>
                                 </tr>
                             <?php endforeach; ?>
                         </tbody>

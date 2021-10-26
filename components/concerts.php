@@ -12,10 +12,9 @@ $concertsArray = $db->getConcerts();
 <main>
     <?php foreach ($concertsArray as $concert) : ?>
         <p><?= date('Y/m/d g:ia', $concert['date']); ?></p>
-        <h3><?= $concert['venue']; ?></h3>
+        <p><?= $concert['venue']; ?></p>
         <p><?= $concert['country']; ?></p>
         <p><?= $concert['city']; ?></p>
-
     <?php endforeach; ?>
 </main>
 

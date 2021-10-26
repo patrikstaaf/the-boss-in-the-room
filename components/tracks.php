@@ -7,10 +7,6 @@ require __DIR__ . '/header.php';
 $db = new fetch;
 $tracksArray = $db->getTracks();
 
-// $milliseconds = $tracksArray['duration']
-
-// $milliseconds = implode(' ', array_column($tracksArray, 'duration'));
-
 ?>
 
 <header><?php require __DIR__ . '/navbar.php'; ?></header>

@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 class db
 {
+
+    // Database connection
+
     protected function connect(): object
     {
         $fileName = __DIR__ . "/theboss.db";

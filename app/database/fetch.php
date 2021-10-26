@@ -6,13 +6,15 @@ require_once __DIR__ . '/connection.php';
 
 class fetch extends db
 {
+
+    // Fetch all data
+
     public function getAlbums(): array
     {
         $db = $this->connect();
         $albumsTable = $db->prepare("SELECT * FROM albums");
         $albumsTable->execute();
         $albumsArray = $albumsTable->fetchAll(PDO::FETCH_ASSOC);
-
         return $albumsArray;
     }
 
@@ -22,7 +24,6 @@ class fetch extends db
         $tracksTable = $db->prepare("SELECT * FROM tracks");
         $tracksTable->execute();
         $tracksArray = $tracksTable->fetchAll(PDO::FETCH_ASSOC);
-
         return $tracksArray;
     }
 
@@ -32,29 +33,30 @@ class fetch extends db
         $concertsTable = $db->prepare("SELECT * FROM concerts");
         $concertsTable->execute();
         $concertsArray = $concertsTable->fetchAll(PDO::FETCH_ASSOC);
-
         return $concertsArray;
     }
 
-    // Quiz logic
 
-    public function getQuestion(int $number): array
+    // Fetch data for quiz.php
+
+    public function getAllQuestions(): array
     {
         $db = $this->connect();
-        $questionTable = $db->prepare("SELECT * FROM quiz_questions WHERE id = $number");
-        $questionTable->execute();
-        $questionArray = $questionTable->fetchAll(PDO::FETCH_ASSOC);
+        $sql = "SELECT * FROM quiz_questions";
+        $sql = $db->prepare($sql);
+        $sql->execute();
 
-        return $questionArray;
-    }
+        $result = [];
 
-    public function getAnswer(int $number): array
-    {
-        $db = $this->connect();
-        $answerTable = $db->prepare("SELECT * FROM quiz_answers WHERE question_id = $number");
-        $answerTable->execute();
-        $answerArray = $answerTable->fetchAll(PDO::FETCH_ASSOC);
+        while ($row = $sql->fetch(PDO::FETCH_ASSOC)) {
+            $answerSql = "SELECT answers, correct FROM quiz_answers WHERE question_id=" . $row['id'];
+            $answerSql = $db->prepare($answerSql);
+            $answerSql->execute();
 
-        return $answerArray;
+            $row += ['answers' => $answerSql->fetchAll(PDO::FETCH_ASSOC)];
+            array_push($result, $row);
+        }
+
+        return $result;
     }
 }

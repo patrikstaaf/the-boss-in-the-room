@@ -17,7 +17,7 @@
                 <a href="/components/albums.php" class="py-5 px-3 hover:text-gray-500">Albums</a>
                 <a href="/components/tracks.php" class="py-5 px-3 hover:text-gray-500">Tracks</a>
                 <a href="/components/concerts.php" class="py-5 px-3 hover:text-gray-500">Concerts</a>
-                <a href="/components/quiz.php" class="py-2 px-3 bg-black hover:bg-yellow-300 text-white hover:text-yellow-800 rounded transition duration-300">Quiz</a>
+                <a href="/components/quiz.php" class="py-2 px-5 bg-black hover:bg-red-200 text-white hover:text-yellow-800 rounded transition duration-300">Quiz</a>
             </div>
 
             <!-- Hamburger icon -->

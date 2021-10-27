@@ -16,6 +16,7 @@ $concertsArray = $db->getConcerts();
         <p><?= $concert['country']; ?></p>
         <p><?= $concert['city']; ?></p>
     <?php endforeach; ?>
+
 </main>
 
 

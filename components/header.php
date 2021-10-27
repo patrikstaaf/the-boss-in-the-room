@@ -13,7 +13,6 @@
     <link rel="mask-icon" href="/assets/springsteen.svg" color="#000000">
     <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
     <script src="https://cdn-tailwindcss.vercel.app/"></script>
-    <script src="/mobile-menu.js"></script>
 </head>
 
 <body>

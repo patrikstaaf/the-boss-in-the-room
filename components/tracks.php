@@ -17,9 +17,14 @@ $tracksArray = $db->getTracks();
                 <h1 class="font-bold text-2xl md:text-3xl lg:text-4xl font-heading text-white pt-16">
                     Tracks
                 </h1>
+                <p>"Do you believe in destiny? This song was randomize for you (refresh the page for a new one)."</p>
+                <div><?= randomTrack($tracksArray);
+                        ?></div>
+
             </div>
             <div class="w-full bg-gray-50">
                 <div class="flex w-full justify-center">
+
                     <table class="table-fixed border border-gray-500 border-collapse w-4/5 mx-24 mt-14">
                         <thead>
                             <tr class="border-b-2 border-black">

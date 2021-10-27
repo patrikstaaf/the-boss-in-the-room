@@ -34,32 +34,6 @@ $questions = $db->getAllQuestions();
     <button id="submit-btn">Check answers</button>
     <span id="correct-result"></span>
 
-    <script>
-        document.getElementById("submit-btn").addEventListener('click', () => {
-            const questions = [
-                document.getElementsByClassName('question-1'),
-                document.getElementsByClassName('question-2'),
-                document.getElementsByClassName('question-3'),
-                document.getElementsByClassName('question-4'),
-                document.getElementsByClassName('question-5')
-            ]
-
-            let correct = 0;
-
-            questions.forEach((question) => {
-                for (let i = 0; i < question.length; i++) {
-                    const answer = question[i];
-
-                    if (answer.checked && answer.dataset.correct == "true") {
-                        correct++;
-                    }
-                }
-            })
-
-            document.getElementById("correct-result").innerHTML = "You got " + correct + "/" + questions.length + " correct."
-        })
-    </script>
-
 </main>
 
 <?php require __DIR__ . '/footer.php'; ?>

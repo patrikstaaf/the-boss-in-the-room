@@ -37,23 +37,23 @@ class fetch extends db
     }
 
 
-    // Fetch data for quiz.php
+    // Fetch data for quiz
 
     public function getAllQuestions(): array
     {
         $db = $this->connect();
-        $sql = "SELECT * FROM quiz_questions";
-        $sql = $db->prepare($sql);
-        $sql->execute();
+        $quizQuestion = "SELECT * FROM quiz_questions";
+        $quizQuestion = $db->prepare($quizQuestion);
+        $quizQuestion->execute();
 
         $result = [];
 
-        while ($row = $sql->fetch(PDO::FETCH_ASSOC)) {
-            $answerSql = "SELECT answers, correct FROM quiz_answers WHERE question_id=" . $row['id'];
-            $answerSql = $db->prepare($answerSql);
-            $answerSql->execute();
+        while ($row = $quizQuestion->fetch(PDO::FETCH_ASSOC)) {
+            $answerQuiz = "SELECT answers, correct FROM quiz_answers WHERE question_id=" . $row['id'];
+            $answerQuiz = $db->prepare($answerQuiz);
+            $answerQuiz->execute();
 
-            $row += ['answers' => $answerSql->fetchAll(PDO::FETCH_ASSOC)];
+            $row += ['answers' => $answerQuiz->fetchAll(PDO::FETCH_ASSOC)];
             array_push($result, $row);
         }
 

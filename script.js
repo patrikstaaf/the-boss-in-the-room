@@ -28,7 +28,6 @@ document.getElementById('submit-btn').addEventListener('click', () => {
 
       if (answer.checked && answer.dataset.correct == 'true') {
         correct++;
-        // answer.style.color = 'lightgreen';
       }
     }
   });

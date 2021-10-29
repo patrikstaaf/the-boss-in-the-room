@@ -7,7 +7,7 @@ require_once __DIR__ . '/connection.php';
 class fetch extends db
 {
 
-    // Fetch all data
+    // Fetch data for albums, tracks & concert
 
     public function getAlbums(): array
     {
@@ -49,7 +49,7 @@ class fetch extends db
         $result = [];
 
         while ($row = $quizQuestion->fetch(PDO::FETCH_ASSOC)) {
-            $answerQuiz = "SELECT answers, correct FROM quiz_answers WHERE question_id=" . $row['id'];
+            $answerQuiz = "SELECT id, answers, correct FROM quiz_answers WHERE question_id=" . $row['id'];
             $answerQuiz = $db->prepare($answerQuiz);
             $answerQuiz->execute();
 

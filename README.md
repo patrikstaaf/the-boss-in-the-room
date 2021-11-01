@@ -1,12 +1,21 @@
 <img src="https://media3.giphy.com/media/mTjdPUfVR6J6o/giphy.gif?cid=790b761117ff6a2021b7537036980fc8f71ed011bc361782&rid=giphy.gif&ct=g">
 
-# Project Title
+# The Boss in the Room
+First PHP project with various requirements (arrays, functions, variables, multiple data types, loops etc.)
 
-Text about the project and why it exists. This would also be a great place to link the project on One.com.
+Live version: https://patrikstaaf.se/the-boss-in-the-room/
 
 # Installation
 
-Add the installation instructions.
+1. Clone this repo to preferred folder: 
+> git clone https://github.com/patrikstaaf/the-boss-in-the-room.git
+
+2. Start a localhost server:
+> php -S localhost:8000
+
+3. Enter the url in your browser:
+> http://localhost:8000 
+
 
 # Code Review
 
@@ -28,5 +37,5 @@ Code review written by [Theo Sandell](https://github.com/theo0165).
 
 Tested by the following people:
 
-1. Jane Doe
-2. John Doe
+1. Christopher Michael
+2. Marcus Hägerstrand
